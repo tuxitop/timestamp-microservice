@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1= title
+    h2 Guide
+    p.
+        you can pass a string as a parameter and the it will check to see
+        weather that string contains either unix timestamp or a natural
+        language date, eg. January 1, 2017. It will return a json object.
+    h2 Example usage
+    p
+        code
+            a(href="/December%2015,%202015") #{baseURL}/December%2015,%202015
+    p
+        code
+            a(href="/1450137600") #{baseURL}/1450137600
+    h2 Example output
+    p
+        code { "unix": 1450137600, "natural": "December 15, 2015" }
+    h2 Source code
+    p you can find the source code of this website at 
+        a(href="https://github.com/tuxitop/timestamp-microservice") github.
